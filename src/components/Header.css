@@ -1,0 +1,28 @@
+a.contact, p.contact {
+  color: black;
+  text-decoration: none;
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+a > p:hover {
+  color: SlateGray;
+}
+
+.icon {
+  display: inline;
+}
+
+div.contact {
+  text-align: right;
+}
+
+div.header {
+  align-items: center;
+}
+
+h1.name {
+  font-size: 56px;
+}

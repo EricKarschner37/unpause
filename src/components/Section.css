@@ -1,0 +1,16 @@
+h3.title {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+a {
+  text-decoration: none;
+}
+
+div.section {
+  margin-bottom: 24px;
+}
+
+div.subsection {
+  margin-bottom: 12px;
+}
