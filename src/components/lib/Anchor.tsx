@@ -4,6 +4,8 @@ interface AnchorProps {
   target?: string;
 }
 
-export const Anchor = ({children, href, target}: AnchorProps) =>
-  <a href={href} target={target}>{children}</a>
-  
+export const Anchor = ({ children, href, target }: AnchorProps) => (
+  <a href={href} target={target}>
+    {children}
+  </a>
+);

@@ -1,1 +1,1 @@
-export { PageResume } from './PageResume';
+export { PageResume } from "./PageResume";
