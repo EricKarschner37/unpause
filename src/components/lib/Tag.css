@@ -7,3 +7,19 @@ div.tag {
   margin-right: 8px;
   display: inline-block;
 }
+
+div.filtered {
+  border-color: SlateBlue !important;
+}
+
+span.filtered {
+  color: SlateBlue !important;
+}
+
+span.icon {
+  margin-right: 2px;
+}
+
+div.filterable {
+  cursor: pointer;
+}

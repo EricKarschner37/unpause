@@ -5,7 +5,34 @@ import './Tag.css';
 export interface TagProps {
   text: string;
   icon?: IconProp;
+  iconIsFiltered?: boolean;
+  textIsFiltered?: boolean;
+  isFilterable?: boolean;
+  onClick?: (filter: string) => void;
 }
 
-export const Tag = ({icon, text}: TagProps) =>
-  <div className="tag">{icon && <><FontAwesomeIcon icon={icon} /> </>}{text}</div>
+export const Tag = ({
+  icon, 
+  text, 
+  iconIsFiltered = false, 
+  textIsFiltered = false,
+  isFilterable = false,
+  onClick
+}: TagProps) =>
+  <div
+  onClick={() => onClick && onClick(text)}
+  className={`
+    ${iconIsFiltered || textIsFiltered ? 'filtered' : ''}
+    ${isFilterable ? 'filterable' : ''}
+    tag
+  `}>
+    {icon &&
+      <span
+        className={`icon ${iconIsFiltered ? 'filtered' : ''}`}
+      > 
+        <FontAwesomeIcon
+        icon={icon} /> 
+      </span> 
+    }
+    <span className={`${textIsFiltered ? 'filtered' : ''}`}>{text}</span>
+  </div>

@@ -1,0 +1,1 @@
+export { PageResume } from './PageResume';
