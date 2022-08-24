@@ -8,6 +8,11 @@ div.tag {
   display: inline-block;
 }
 
+div.tag:hover,
+div.filtered {
+  background-color: #dfdfdf;
+}
+
 div.filtered {
   border-color: SlateBlue !important;
 }

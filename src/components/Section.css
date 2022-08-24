@@ -14,3 +14,11 @@ div.section {
 div.subsection {
   margin-bottom: 12px;
 }
+
+span.subsection-title {
+  font-size: 20px;
+}
+
+span.subsection-description {
+  color: DimGray;
+}

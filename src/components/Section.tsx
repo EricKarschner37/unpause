@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useContext } from "react";
 import {
-  getIconFilter,
   normalizeFilterString,
   placeBetween,
   tagIconIsFiltered,
@@ -10,6 +9,7 @@ import {
   tagTextIsFiltered,
 } from "../lib/util";
 import { PageResumeContext } from "../pages/PageResume/page-resume-store";
+import {SectionProps, SubsectionProps} from "../pages/PageResume/page-resume-types";
 import { Tag, TagProps } from "./lib/Tag";
 import "./Section.css";
 
@@ -23,28 +23,6 @@ const SectionDivider = () => (
     }}
   />
 );
-
-interface SectionProps {
-  title: string;
-  subsections: SubsectionProps[];
-}
-
-interface SubsectionLink {
-  display: React.ReactNode;
-  link: string;
-}
-
-interface SubsectionProps {
-  title?: string;
-  link?: SubsectionLink;
-  description?: string;
-  dateString?: string;
-  tags?: TagProps[];
-
-  // For sections which just contain tags (i.e. Languages),
-  // the tags should not be filtered out when some tags are selected
-  contentShouldBeFiltered?: boolean;
-}
 
 const DateDisplay = ({ text: dateString }: { text: string }) => (
   <>
@@ -114,8 +92,8 @@ const Subsection = ({
 
   return (
     <div className="subsection">
-      <span className="subsection-title">
-        {title}
+      <span>
+        <span className="subsection-title">{title}</span>
         {link && (
           <a href={link.link} target="_blank" rel="noreferrer">
             {" "}
@@ -142,7 +120,7 @@ const subsectionShouldRender = (
   subsection: SubsectionProps,
   filters: Set<string>
 ) =>
-  !subsection.contentShouldBeFiltered ||
+  !(subsection.contentShouldBeFiltered ?? true) ||
   !subsection.tags ||
   filters.size === 0 ||
   subsection.tags.find(
