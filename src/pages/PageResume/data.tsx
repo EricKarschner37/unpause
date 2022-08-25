@@ -44,7 +44,7 @@ export const experienceSections = [
   {
     title: "Software Engineering Intern",
     description:
-      "Spearheaded and completed project to overhaul Service Resource page in React app and created unit and synthetics tests to ensure performance.",
+      "Spearheaded and completed project to overhaul Service Resource page in React app and created unit and synthetics tests to ensure performance. Conducted an experiment to evaluate and measure performance of WebAssembly usage.",
     link: {
       display: "Datadog",
       link: "https://datadoghq.com",
@@ -62,6 +62,9 @@ export const experienceSections = [
         text: "Javascript",
         icon: ["fab", "js"] as IconProp,
         isFilterable: true,
+      },
+      {
+        text: "WebAssembly",
       },
     ],
   },
@@ -99,7 +102,7 @@ export const experienceSections = [
         text: "Dagger",
         icon: ["fab", "android"] as IconProp,
         isFilterable: true,
-      }
+      },
     ],
   },
   {
@@ -112,7 +115,11 @@ export const experienceSections = [
     },
     dateString: "Jan 2021 - May 2021",
     tags: [
-      { text: "Tensorflow", isFilterable: true, icon: ["fab", "python"] as IconProp },
+      {
+        text: "Tensorflow",
+        isFilterable: true,
+        icon: ["fab", "python"] as IconProp,
+      },
       { text: "Computer Vision", isFilterable: true },
       { text: "Neural Networks", isFilterable: true },
       { text: "TF-IDF", isFilterable: true },
@@ -130,9 +137,17 @@ export const experienceSections = [
     },
     dateString: "Oct 2020 - Dec 2020",
     tags: [
-      { text: "React Native", isFilterable: true, icon: ["fab", "js"] as IconProp },
+      {
+        text: "React Native",
+        isFilterable: true,
+        icon: ["fab", "js"] as IconProp,
+      },
       { text: "Expo", isFilterable: true, icon: ["fab", "js"] as IconProp },
-      { text: "Javascript", isFilterable: true, icon: ["fab", "js"] as IconProp },
+      {
+        text: "Javascript",
+        isFilterable: true,
+        icon: ["fab", "js"] as IconProp,
+      },
     ],
   },
 ];
@@ -302,20 +317,30 @@ export const librariesSections = [
 export const activitiesSections = [
   {
     title: "R&D Director",
-    description: "Responsible for aiding, encouraging, and evaluating member participation in technical projects.",
+    description:
+      "Responsible for aiding, encouraging, and evaluating member participation in technical projects.",
     dateString: "Dec 2020 - Dec 2021",
     link: {
-      display: <><FontAwesomeIcon icon={"globe" as IconProp} /> Computer Science House</>,
-      link: "https://csh.rit.edu"
-    }
+      display: (
+        <>
+          <FontAwesomeIcon icon={"globe" as IconProp} /> Computer Science House
+        </>
+      ),
+      link: "https://csh.rit.edu",
+    },
   },
   {
     title: "System Administrator",
-    description: "Assisted in maintaining and moderating critical infrastucture, including Ceph storage servers.",
+    description:
+      "Assisted in maintaining and moderating critical infrastucture, including Ceph storage servers.",
     dateString: "April 2021 - Present",
     link: {
-      display: <><FontAwesomeIcon icon={"globe" as IconProp} /> Computer Science House</>,
-      link: "https://csh.rit.edu"
-    }
-  }
+      display: (
+        <>
+          <FontAwesomeIcon icon={"globe" as IconProp} /> Computer Science House
+        </>
+      ),
+      link: "https://csh.rit.edu",
+    },
+  },
 ];
