@@ -49,7 +49,7 @@ export const experienceSections = [
       display: "Datadog",
       link: "https://datadoghq.com",
     },
-    dateString: "Jan 2022 - Apr 2022",
+    dateString: "Jan 2022 - Aug 2022",
     tags: [
       { text: "React", icon: ["fab", "js"] as IconProp, isFilterable: true },
       {
@@ -63,6 +63,7 @@ export const experienceSections = [
         icon: ["fab", "js"] as IconProp,
         isFilterable: true,
       },
+      { text: "Go", icon: ["fab", "golang"] as IconProp, isFilterable: true },
       {
         text: "WebAssembly",
       },
